@@ -29,3 +29,11 @@ This study utilizes the official **Brugada-HUCA Dataset** from PhysioNet.
 To ensure **safety validation** and **model interpretability**, we implement:
 * **Saliency Maps:** Visualizing which parts of the ECG signal (e.g., ST-segment) influenced the AI's diagnosis.
 * **Evidence-Based Results:** Ensuring every AI suggestion is backed by clinical markers.
+
+---
+
+## 🚀How to Run Code
+1. open file `AUTUMN_ANALYTICS.ipynb`.
+2. click button **"Open in Colab"**.
+3. RUN ALL to download data set and see output.
+  
