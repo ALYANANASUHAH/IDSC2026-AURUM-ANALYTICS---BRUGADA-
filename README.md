@@ -18,7 +18,7 @@ This study utilizes the official **Brugada-HUCA Dataset** from PhysioNet.
 
 ---
 
-## Technical Methodology
+## Methodology
 * **Preprocessing:** Noise removal via Band-pass filtering (0.5 - 45 Hz).
 * **Model Architecture:** Convolutional Neural Networks (CNN) for spatial feature extraction in Lead V1 & V2.
 * **Decision Making:** A Reinforcement Learning (RL) agent trained to optimize treatment outcomes based on patient risk profiles.
