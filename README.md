@@ -1,6 +1,6 @@
 # IDSC 2026: Mathematics for Hope in Healthcare
 **Team Name:** Aurum Analytics  
-**Project Title:** Automated Brugada Syndrome Detection & Treatment Strategy Optimization using Deep Learning and Reinforcement Learning.
+**Project Title:** BRUGADA-HUCA:12 - LEAD ECG RECORDINGS FOR THE STUDY OF BRUGADA SYNDROME
 
 ---
 
