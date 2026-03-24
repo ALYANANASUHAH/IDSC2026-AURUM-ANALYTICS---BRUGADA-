@@ -27,7 +27,7 @@ This study utilizes the official **Brugada-HUCA Dataset** from PhysioNet.
 
 ## Ethical AI & Interpretability
 To ensure **safety validation** and **model interpretability**, we implement:
-* **Clinical Transparency:** Focuses on interpretable features (ECG leads V1–V3 and wave amplitudes) so clinicians can verify the AI’s logic.
+* **Clinical Transparency:** Focuses on interpretable features to ensure clinicians can verify the AI’s logic.
 * **Human Support:** Positions the AI as a decision-support tool rather than a replacement, keeping final clinical control with the doctor.
 
 ---
