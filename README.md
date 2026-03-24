@@ -5,35 +5,40 @@
 ---
 
 ## Project Overview
-This project aims to provide **hope** to patients at risk of Sudden Arrhythmic Death Syndrome (SADS) by leveraging AI for early detection of **Brugada Syndrome**. Using the Brugada-HUCA dataset, we focus on:
+This study uses the Brugada-HUCA dataset, a collection of 12-lead ECG recordings from Central University Hospital of Asturias available on PhysioNet, to analyze Brugada Syndrome. We focus on:
 1. **Automated Diagnosis:** High-precision classification of Brugada ECG patterns.
-2. **Treatment Optimization:** Utilizing Reinforcement Learning to suggest clinical decision-making strategies (e.g., ICD implantation vs. monitoring).
+2. **Treatment Optimization:** Utilizing Reinforcement Learning to suggest clinical decision-making strategies.
 
 ---
 
-## Dataset & Citations
+## Dataset and Citations
 This study utilizes the official **Brugada-HUCA Dataset** from PhysioNet.
-* **Dataset Citation:** *[salin teks link dari website Brugada-HUCA PhysioNet and paste]*
-* **Platform Citation:** Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
+* **Dataset Citation:** Costa Cortez, N., & Garcia Iglesias, D. (2026). Brugada-HUCA: 12-Lead ECG Recordings for the Study of Brugada Syndrome (version 1.0.0). PhysioNet. https://doi.org/10.13026/0m2w-dy83
+* **Platform Citation:** Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220. https://doi.org/10.1161/01.CIR.101.23.e215rate
 
 ---
 
 ## Methodology
-* **Preprocessing:** Noise removal via Band-pass filtering (0.5 - 45 Hz).
-* **Model Architecture:** Convolutional Neural Networks (CNN) for spatial feature extraction in Lead V1 & V2.
-* **Decision Making:** A Reinforcement Learning (RL) agent trained to optimize treatment outcomes based on patient risk profiles.
+* **Preprocessing:** Addressed severe class imbalance using SMOTE and handled missing values through median imputation to ensure data integrity.
+* **Model Architecture:** Selected XGBoost as the primary classifier for its superior ability to model complex, non-linear relationships in tabular ECG data.
+* **Decision Making:** Lowered the classification threshold to 0.3 to prioritize Recall (sensitivity) and minimize the risk of missed Brugada diagnoses.
 
 ---
 
 ## Ethical AI & Interpretability
 To ensure **safety validation** and **model interpretability**, we implement:
-* **Saliency Maps:** Visualizing which parts of the ECG signal (e.g., ST-segment) influenced the AI's diagnosis.
-* **Evidence-Based Results:** Ensuring every AI suggestion is backed by clinical markers.
+* **Clinical Transparency:** Focuses on interpretable features (ECG leads V1–V3 and wave amplitudes) so clinicians can verify the AI’s logic.
+* **Human Support:** Positions the AI as a decision-support tool rather than a replacement, keeping final clinical control with the doctor.
 
 ---
 
-## How to Run Code
+## Steps to Run Code
 1. open file `AURUM_ANALYTICS.ipynb`.
 2. click button **"Open in Colab"**.
-3. RUN ALL to download data set and see output.
+3. Upload Data: Click the Folder icon on the left sidebar, choose content folder and upload:
+   - files.zip (contains all patient folders with their respective .hea and .dat files.)
+     (Note: ZIP file name must be EXACTLY as shown)
+   - metadata.csv file
+4. Run Code: select "Run all".
+5. Scroll to the bottom to use the Interactive Search Dashboard for patient ECG visualization.
   
